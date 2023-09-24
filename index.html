@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <!-- Load d3.js -->
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<style> 
+
+.container-wrapper 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Set the container wrapper to full viewport height */
+}
+
+.container {
+    width: 600px; /* Set the width as needed */
+    margin-top: 300px;
+
+    max-width: 500px;
+    height: 400px; /* Set the height as needed */
+    background-color: #eec8ee;
+    border-radius: 20px; /* Adjust the radius for rounded corners */
+    padding: 20px 20px 30px 30px; /* Add padding to separate the graph from the container edges */
+}
+
+.container-bottom {
+    
+    background-color: #FEFFD1;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+
+
+
+#my_dataviz,
+#my_dataviz1
+{
+    width: 100%; /* Set the width to 100% of the parent container's width */
+    height: 100%; /* Set the height to 100% of the parent container's height */
+}
+
+
+</style>
+<body>
+    <div class = "container-wrapper">
+        <div class = "container">
+            <div id="my_dataviz"></div>
+        </div>
+        <div class = "container-bottom">
+            <div id="my_dataviz1"></div>
+        </div>
+    </div>
+<script>
+   
+    var margin = { top: 30, right: 30, bottom: 70, left: 60 },
+            width = 460 - margin.left - margin.right,
+            height = 400 - margin.top - margin.bottom;
+
+        var svg = d3.select("#my_dataviz")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        d3.csv("electronics.csv")
+        
+            .then(function(data) {
+                // Ensure that the data is parsed correctly
+                var x = d3.scaleBand()
+                    .range([0, width])
+                    .domain(data.map(function(d) { return d.Product; }))
+                    .padding(0.2);
+                    svg.append("g")
+                    .attr("transform", "translate(0," + height + ")")
+                    .call(d3.axisBottom(x))
+                    .selectAll("text")
+                    .attr("transform", "translate(-10,0)rotate(-45)")
+                    .style("text-anchor", "end");
+
+                var customColors = ["#219C90", "#E9B824", "#EE9322", "#D83F31", "#219C90"];
+
+                var colorScale = d3.scaleOrdinal()
+                .domain(data.map(function(d) { return d.Product; })).range(customColors);
+
+
+                var y = d3.scaleLinear()
+                    .domain([0, 30])
+                    .range([ height, 0]);
+                    svg.append("g")
+                    .call(d3.axisLeft(y));
+
+                    svg.selectAll("mybar")
+                    .data(data)
+                    .enter()
+                    .append("rect")
+                    .attr("x", function(d) { return x(d.Product); })
+                    .attr("y", function(d) { return y(d.Unit); })
+                    .attr("width", x.bandwidth())
+                    .attr("height", function(d) { return height - y(d.Unit); })
+                    .attr("fill", function(d) {return colorScale(d.Product);});
+
+                // Rest of your code for creating the chart
+
+                svg.append("text")
+                .attr("x", (width / 2 ))
+                .attr("y", 0 - (margin.top / 2 ))
+                .attr("text-anchor", "middle")
+                .style("font-size", "16px")
+                .style("text-decoratioin", "underline")
+                .text("Weekly cummulative hours of different electronics");
+            })
+            .catch(function(error) {
+                console.error("Error loading CSV:", error);
+            });
+
+ 
+           // Second Graph
+var margin2 = { top: 30, right: 30, bottom: 70, left: 60 },
+    width2 = 460 - margin2.left - margin2.right,
+    height2 = 400 - margin2.top - margin2.bottom;
+
+var svg2 = d3.select("#my_dataviz1")
+    .append("svg")
+    .attr("width", width2 + margin2.left + margin2.right)
+    .attr("height", height2 + margin2.top + margin2.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin2.left + "," + margin2.top + ")");
+
+d3.csv("electronics1.csv")
+    .then(function(data) {
+        // Define the months and color scale
+        var months = ["January", "February", "March", "April"];
+        var color = d3.scaleOrdinal()
+            .domain(data.columns.slice(1))
+            .range(["#219C90", "#E9B824", "#EE9322", "#D83F31"]);
+
+        // Stack the data
+        var stackedData = d3.stack()
+            .keys(data.columns.slice(1))(data);
+
+        // Set up scales and axes
+        var x = d3.scaleBand()
+            .domain(data.map(function(d) { return d.Product; }))
+            .range([0, width2])
+            .padding(0.2);
+
+        var y = d3.scaleLinear()
+            .domain([0, d3.max(stackedData, function(d) { return d3.max(d, function(d) { return d[1]; }); })])
+            .nice()
+            .range([height2, 0]);
+
+        // Create a group for each month
+        var monthGroups = svg2.selectAll(".month-group")
+            .data(stackedData)
+            .enter().append("g")
+            .attr("class", "month-group")
+            .attr("fill", function(d) { return color(d.key); });
+
+        // Create and position the stacked bars
+        monthGroups.selectAll("rect")
+            .data(function(d) { return d; })
+            .enter().append("rect")
+            .attr("x", function(d) { return x(d.data.Product); })
+            .attr("y", function(d) { return y(d[1]); })
+            .attr("height", function(d) { return y(d[0]) - y(d[1]); })
+            .attr("width", x.bandwidth());
+
+        // Add x-axis (Products)
+        svg2.append("g")
+            .attr("class", "x-axis")
+            .attr("transform", "translate(0," + height2 + ")")
+            .call(d3.axisBottom(x));
+
+        // Add y-axis (Months)
+        svg2.append("g")
+            .attr("class", "y-axis")
+            .call(d3.axisLeft(y))
+            .append("text")
+            .attr("x", 2)
+            .attr("y", y(y.ticks().pop()) + 0.5)
+            .attr("dy", "0.32em")
+            .attr("fill", "#000")
+            .attr("font-weight", "bold")
+            .attr("text-anchor", "start")
+            .text("Months");
+
+        // Add legend
+        var legend = svg2.append("g")
+            .selectAll("g")
+            .data(data.columns.slice(1).reverse())
+            .enter().append("g")
+            .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+        legend.append("rect")
+            .attr("x", width2 - 19)
+            .attr("width", 19)
+            .attr("height", 19)
+            .attr("fill", color);
+
+        legend.append("text")
+            .attr("x", width2 - 24)
+            .attr("y", 9.5)
+            .attr("dy", "0.32em")
+            .text(function(d) { return d; });
+
+        // Add title
+        svg2.append("text")
+            .attr("x", width2 / 2)
+            .attr("y", -10)
+            .attr("text-anchor", "middle")
+            .style("font-size", "16px")
+            .text("Monthly Sales of Electronics by Product");
+    })
+    .catch(function(error) {
+        console.error("Error loading CSV:", error);
+    });
+
+
+
+
+
+
+
+
+
+
+
+   
+</script>
+</body>
+</html>
