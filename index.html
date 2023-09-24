@@ -17,14 +17,14 @@
 }
 
 .container {
-    width: 600px; /* Set the width as needed */
+    width: 600px; 
     margin-top: 300px;
 
     max-width: 500px;
-    height: 400px; /* Set the height as needed */
+    height: 400px; 
     background-color: #eec8ee;
-    border-radius: 20px; /* Adjust the radius for rounded corners */
-    padding: 20px 20px 30px 30px; /* Add padding to separate the graph from the container edges */
+    border-radius: 20px; 
+    padding: 20px 20px 30px 30px; /* to add padding to separate the graph from the container edges */
 }
 
 .container-bottom {
@@ -56,7 +56,7 @@
         </div>
     </div>
 <script>
-   
+   //code from sir's original file - no amendments
     var margin = { top: 30, right: 30, bottom: 70, left: 60 },
             width = 460 - margin.left - margin.right,
             height = 400 - margin.top - margin.bottom;
@@ -105,7 +105,7 @@
                     .attr("height", function(d) { return height - y(d.Unit); })
                     .attr("fill", function(d) {return colorScale(d.Product);});
 
-                // Rest of your code for creating the chart
+                // rest of the code for creating the chart
 
                 svg.append("text")
                 .attr("x", (width / 2 ))
@@ -134,17 +134,17 @@ var svg2 = d3.select("#my_dataviz1")
 
 d3.csv("electronics1.csv")
     .then(function(data) {
-        // Define the months and color scale
+        //to dfine the months and color scale
         var months = ["January", "February", "March", "April"];
         var color = d3.scaleOrdinal()
             .domain(data.columns.slice(1))
             .range(["#219C90", "#E9B824", "#EE9322", "#D83F31"]);
 
-        // Stack the data
+        //to stack the data
         var stackedData = d3.stack()
             .keys(data.columns.slice(1))(data);
 
-        // Set up scales and axes
+        //to set up scales and axes
         var x = d3.scaleBand()
             .domain(data.map(function(d) { return d.Product; }))
             .range([0, width2])
@@ -155,14 +155,14 @@ d3.csv("electronics1.csv")
             .nice()
             .range([height2, 0]);
 
-        // Create a group for each month
+        //to creat a group for each month
         var monthGroups = svg2.selectAll(".month-group")
             .data(stackedData)
             .enter().append("g")
             .attr("class", "month-group")
             .attr("fill", function(d) { return color(d.key); });
 
-        // Create and position the stacked bars
+        //to createe and position the stacked bars
         monthGroups.selectAll("rect")
             .data(function(d) { return d; })
             .enter().append("rect")
@@ -171,13 +171,13 @@ d3.csv("electronics1.csv")
             .attr("height", function(d) { return y(d[0]) - y(d[1]); })
             .attr("width", x.bandwidth());
 
-        // Add x-axis (Products)
+        //adding dd x-axis (products)
         svg2.append("g")
             .attr("class", "x-axis")
             .attr("transform", "translate(0," + height2 + ")")
             .call(d3.axisBottom(x));
 
-        // Add y-axis (Months)
+        // to addd y-axis (mnths)
         svg2.append("g")
             .attr("class", "y-axis")
             .call(d3.axisLeft(y))
@@ -190,7 +190,7 @@ d3.csv("electronics1.csv")
             .attr("text-anchor", "start")
             .text("Months");
 
-        // Add legend
+        // add legend so ppl can distinguish
         var legend = svg2.append("g")
             .selectAll("g")
             .data(data.columns.slice(1).reverse())
