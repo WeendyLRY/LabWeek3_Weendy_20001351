@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body>
+        <GetResidentsResponse xmlns="http://tempuri.org/YSI.Interfaces.WebServices/ItfResidentData">
+            <GetResidentsResult>
+                <MITS-ResidentData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="">
+                    <PropertyResidents Code="lessen2">
+                        <Residents>
+                            <Resident tCode="t0109528" pCode="p0707157">
+                                <Status>Applicant</Status>
+                                <FirstName>Ben</FirstName>
+                                <LastName>Barry</LastName>
+                                <Email>benbarry@mail.com</Email>
+                                <Phone PhoneType="office">
+                                    <PhoneDescription>Office</PhoneDescription>
+                                    <PhoneNumber>123</PhoneNumber>
+                                </Phone>
+                                <Phone PhoneType="home">
+                                    <PhoneDescription>Home</PhoneDescription>
+                                    <PhoneNumber>123123</PhoneNumber>
+                                </Phone>
+                                <Phone PhoneType="fax">
+                                    <PhoneDescription>FAX</PhoneDescription>
+                                    <PhoneNumber>123123</PhoneNumber>
+                                </Phone>
+                                <Phone PhoneType="cell">
+                                    <PhoneDescription>Mobile</PhoneDescription>
+                                    <PhoneNumber>123</PhoneNumber>
+                                </Phone>
+                                <Rent>900.00</Rent>
+                                <UnitCode>102</UnitCode>
+                                <UnitRent>900.00</UnitRent>
+                                <UnitSqFt>1000.000000</UnitSqFt>
+                                <UnitEconomicStatus>Residential</UnitEconomicStatus>
+                                <UnitType>ut002198</UnitType>
+                                <UnitTypeDescription>1 Bedroom 1 Bath</UnitTypeDescription>
+                                <UnitTypeRent>900.000000</UnitTypeRent>
+                                <UnitTypeSqFt>1000.000000</UnitTypeSqFt>
+                                <LeaseFromDate>2/24/2024</LeaseFromDate>
+                                <LeaseToDate>2/12/2025</LeaseToDate>
+                                <MoveInDate>2/24/2024</MoveInDate>
+                                <MoveOutDate />
+                                <NoticeDate />
+                                <CustomRecords scope="Resident">
+                                    <Record Field="sFields0" Name="ResLicense#" Value="" />
+                                    <Record Field="sFields1" Name="Car" Value="" />
+                                    <Record Field="sFields2" Name="Bank" Value="" />
+                                    <Record Field="sFields3" Name="Account#" Value="" />
+                                    <Record Field="sFields4" Name="Children" Value="" />
+                                    <Record Field="sFields5" Name="Ages" Value="" />
+                                    <Record Field="sFields6" Name="Pets" Value="" />
+                                    <Record Field="sFields7" Name="Reference" Value="" />
+                                    <Record Field="sFields8" Name="Guarantor" Value="" />
+                                    <Record Field="sFields9" Name="Custom Field - Slip" Value="" />
+                                    <Record Field="sFields10" Name="Security Dep Alt" Value="" />
+                                    <Record Field="sFields11" Name="SmartAptAccess" Value="" />
+                                    <Record Field="sFields12" Name="Deposit Waiver" Value="" />
+                                    <Record Field="sFields13" Name="Other 5" Value="" />
+                                </CustomRecords>
+                            </Resident>
+                            <Resident tCode="t0111037" pCode="p0714785">
+                                <Status>Current</Status>
+                                <FirstName>Jacky</FirstName>
+                                <LastName>Chan</LastName>
+                                <Email>jacky@gmail.com</Email>
+                                <Phone PhoneType="office">
+                                    <PhoneDescription>Office</PhoneDescription>
+                                    <PhoneNumber>(555) 555-1234</PhoneNumber>
+                                </Phone>
+                                <Rent>900.00</Rent>
+                                <UnitCode>102</UnitCode>
+                                <UnitRent>900.00</UnitRent>
+                                <UnitSqFt>1000.000000</UnitSqFt>
+                                <UnitEconomicStatus>Residential</UnitEconomicStatus>
+                                <UnitType>ut002198</UnitType>
+                                <UnitTypeDescription>1 Bedroom 1 Bath</UnitTypeDescription>
+                                <UnitTypeRent>900.000000</UnitTypeRent>
+                                <UnitTypeSqFt>1000.000000</UnitTypeSqFt>
+                                <LeaseFromDate>3/14/2024</LeaseFromDate>
+                                <LeaseToDate>3/13/2025</LeaseToDate>
+                                <MoveInDate>3/14/2024</MoveInDate>
+                                <MoveOutDate />
+                                <NoticeDate />
+                                <CustomRecords scope="Resident">
+                                    <Record Field="sFields0" Name="ResLicense#" Value="" />
+                                    <Record Field="sFields1" Name="Car" Value="" />
+                                    <Record Field="sFields2" Name="Bank" Value="" />
+                                    <Record Field="sFields3" Name="Account#" Value="" />
+                                    <Record Field="sFields4" Name="Children" Value="" />
+                                    <Record Field="sFields5" Name="Ages" Value="" />
+                                    <Record Field="sFields6" Name="Pets" Value="" />
+                                    <Record Field="sFields7" Name="Reference" Value="" />
+                                    <Record Field="sFields8" Name="Guarantor" Value="" />
+                                    <Record Field="sFields9" Name="Custom Field - Slip" Value="" />
+                                    <Record Field="sFields10" Name="Security Dep Alt" Value="" />
+                                    <Record Field="sFields11" Name="SmartAptAccess" Value="" />
+                                    <Record Field="sFields12" Name="Deposit Waiver" Value="" />
+                                    <Record Field="sFields13" Name="Other 5" Value="" />
+                                </CustomRecords>
+                                <OtherOccupants>
+                                    <OtherOccupant Code="r0064489" pCode="p0714786" Relationship="Roommate">
+                                        <FirstName>Kimberly</FirstName>
+                                        <LastName>Deng</LastName>
+                                        <Email>kimberly@gmail.com</Email>
+                                        <Phone PhoneType="office">
+                                            <PhoneDescription>Office</PhoneDescription>
+                                            <PhoneNumber>5555551234</PhoneNumber>
+                                        </Phone>
+                                        <Phone PhoneType="home">
+                                            <PhoneDescription>Home</PhoneDescription>
+                                        </Phone>
+                                        <Phone PhoneType="fax">
+                                            <PhoneDescription>FAX</PhoneDescription>
+                                        </Phone>
+                                        <Phone PhoneType="cell">
+                                            <PhoneDescription>Mobile</PhoneDescription>
+                                        </Phone>
+                                        <MoveInDate />
+                                        <MoveOutDate>3/15/2024</MoveOutDate>
+                                        <CustomRecords scope="Roommate">
+                                            <Record Field="dtMoveIn" Name="Move In" Value="" />
+                                            <Record Field="dtMoveOut" Name="Move-Out" Value="3/15/2024" />
+                                            <Record Field="sPhoneNum0" Name="Car Model/Color" Value="" />
+                                            <Record Field="sPhoneNum1" Name="License #" Value="" />
+                                            <Record Field="sPhoneNum2" Name="Employer" Value="" />
+                                            <Record Field="sPhoneNum3" Name="Work Phone" Value="" />
+                                            <Record Field="sPhoneNum4" Name="Work Hours" Value="" />
+                                            <Record Field="sPhoneNum5" Name="Revoke Access" Value="" />
+                                            <Record Field="sPhoneNum6" Name="Other 2" Value="" />
+                                            <Record Field="sPhoneNum7" Name="Other 3" Value="" />
+                                            <Record Field="sPhoneNum8" Name="Other 4" Value="" />
+                                            <Record Field="sPhoneNum9" Name="Other 5" Value="" />
+                                            <Record Field="custom" Name="OccupantType" Value="" />
+                                        </CustomRecords>
+                                    </OtherOccupant>
+                                </OtherOccupants>
+                            </Resident>
+                            <Resident tCode="t0121940" pCode="p0756034">
+                                <Status>Current</Status>
+                                <FirstName>Roma</FirstName>
+                                <LastName>Gim</LastName>
+                                <Email>romagim@mail.com</Email>
+                                <Rent>900.00</Rent>
+                                <UnitCode>103</UnitCode>
+                                <UnitRent>900.00</UnitRent>
+                                <UnitSqFt>1000.000000</UnitSqFt>
+                                <UnitEconomicStatus>Residential</UnitEconomicStatus>
+                                <UnitType>ut002198</UnitType>
+                                <UnitTypeDescription>1 Bedroom 1 Bath</UnitTypeDescription>
+                                <UnitTypeRent>900.000000</UnitTypeRent>
+                                <UnitTypeSqFt>1000.000000</UnitTypeSqFt>
+                                <LeaseFromDate>9/3/2024</LeaseFromDate>
+                                <LeaseToDate>9/3/2025</LeaseToDate>
+                                <MoveInDate>9/3/2025</MoveInDate>
+                                <MoveOutDate />
+                                <NoticeDate />
+                                <CustomRecords scope="Resident">
+                                    <Record Field="sFields0" Name="ResLicense#" Value="" />
+                                    <Record Field="sFields1" Name="Car" Value="" />
+                                    <Record Field="sFields2" Name="Bank" Value="" />
+                                    <Record Field="sFields3" Name="Account#" Value="" />
+                                    <Record Field="sFields4" Name="Children" Value="" />
+                                    <Record Field="sFields5" Name="Ages" Value="" />
+                                    <Record Field="sFields6" Name="Pets" Value="" />
+                                    <Record Field="sFields7" Name="Reference" Value="" />
+                                    <Record Field="sFields8" Name="Guarantor" Value="" />
+                                    <Record Field="sFields9" Name="Custom Field - Slip" Value="" />
+                                    <Record Field="sFields10" Name="Security Dep Alt" Value="" />
+                                    <Record Field="sFields11" Name="SmartAptAccess" Value="" />
+                                    <Record Field="sFields12" Name="Deposit Waiver" Value="" />
+                                    <Record Field="sFields13" Name="Other 5" Value="" />
+                                </CustomRecords>
+								  <OtherOccupants>
+                                    <OtherOccupant Code="rwl2501021359" pCode="pwl2501021359" Relationship="Roommate">
+                                        <FirstName>Kimberly</FirstName>
+                                        <LastName>Deng</LastName>
+                                        <Email>kimberly@gmail.com</Email>
+                                        <Phone PhoneType="office">
+                                            <PhoneDescription>Office</PhoneDescription>
+                                            <PhoneNumber>5555551235</PhoneNumber>
+                                        </Phone>
+                                        <Phone PhoneType="home">
+                                            <PhoneDescription>Home</PhoneDescription>
+                                        </Phone>
+                                        <Phone PhoneType="fax">
+                                            <PhoneDescription>FAX</PhoneDescription>
+                                        </Phone>
+                                        <Phone PhoneType="cell">
+                                            <PhoneDescription>Mobile</PhoneDescription>
+											<PhoneNumber>3737373737</PhoneNumber>
+                                        </Phone>
+                                        <MoveInDate />
+                                        <MoveOutDate>3/15/2025</MoveOutDate>
+                                        <CustomRecords scope="Roommate">
+                                            <Record Field="dtMoveIn" Name="Move In" Value="" />
+                                            <Record Field="dtMoveOut" Name="Move-Out" Value="3/15/2024" />
+                                            <Record Field="sPhoneNum0" Name="Car Model/Color" Value="" />
+                                            <Record Field="sPhoneNum1" Name="License #" Value="" />
+                                            <Record Field="sPhoneNum2" Name="Employer" Value="" />
+                                            <Record Field="sPhoneNum3" Name="Work Phone" Value="" />
+                                            <Record Field="sPhoneNum4" Name="Work Hours" Value="" />
+                                            <Record Field="sPhoneNum5" Name="Revoke Access" Value="" />
+                                            <Record Field="sPhoneNum6" Name="Other 2" Value="" />
+                                            <Record Field="sPhoneNum7" Name="Other 3" Value="" />
+                                            <Record Field="sPhoneNum8" Name="Other 4" Value="" />
+                                            <Record Field="sPhoneNum9" Name="Other 5" Value="" />
+                                            <Record Field="custom" Name="OccupantType" Value="" />
+                                        </CustomRecords>
+                                    </OtherOccupant>
+                                </OtherOccupants>
+                            </Resident>
+                         
+
+                        </Residents>
+                    </PropertyResidents>
+                </MITS-ResidentData>
+            </GetResidentsResult>
+        </GetResidentsResponse>
+    </soap:Body>
+</soap:Envelope>
