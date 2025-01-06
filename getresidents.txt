@@ -152,6 +152,14 @@
                                 <LeaseFromDate>9/3/2024</LeaseFromDate>
                                 <LeaseToDate>9/3/2025</LeaseToDate>
                                 <MoveInDate>9/3/2025</MoveInDate>
+ <Phone PhoneType="other">
+                                    <PhoneDescription>Mobile 2</PhoneDescription>
+                                    <PhoneNumber>2565726410</PhoneNumber>
+                                </Phone>
+ <Phone PhoneType="other">
+                                    <PhoneDescription>Mobile 1</PhoneDescription>
+                                    <PhoneNumber>2565726411</PhoneNumber>
+                                </Phone>
                                 <MoveOutDate />
                                 <NoticeDate />
                                 <CustomRecords scope="Resident">
