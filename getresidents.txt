@@ -23,9 +23,9 @@
                                     <PhoneDescription>FAX</PhoneDescription>
                                     <PhoneNumber>123123</PhoneNumber>
                                 </Phone>
-                                <Phone PhoneType="cell">
-                                    <PhoneDescription>Mobile</PhoneDescription>
-                                    <PhoneNumber>123</PhoneNumber>
+                                <Phone PhoneType="other">
+                                    <PhoneDescription>Mobile 1</PhoneDescription>
+                                    <PhoneNumber>2565726409</PhoneNumber>
                                 </Phone>
                                 <Rent>900.00</Rent>
                                 <UnitCode>102</UnitCode>
