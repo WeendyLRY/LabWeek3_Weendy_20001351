@@ -185,17 +185,19 @@
                                         <Email>whiteboywasted@gmail.com</Email>
                                         <Phone PhoneType="office">
                                             <PhoneDescription>Office</PhoneDescription>
-                                            <PhoneNumber>5555551235</PhoneNumber>
+                                            <PhoneNumber>2565726401</PhoneNumber>
                                         </Phone>
                                         <Phone PhoneType="home">
                                             <PhoneDescription>Home</PhoneDescription>
+                                          <PhoneNumber>2565726402</PhoneNumber>
                                         </Phone>
                                         <Phone PhoneType="fax">
                                             <PhoneDescription>FAX</PhoneDescription>
+ 						<PhoneNumber>2565726403</PhoneNumber>
                                         </Phone>
                                         <Phone PhoneType="cell">
                                             <PhoneDescription>Mobile</PhoneDescription>
-					    <PhoneNumber></PhoneNumber>
+					    <PhoneNumber>2565726404</PhoneNumber>
                                         </Phone>
                                         <MoveInDate />
                                         <MoveOutDate>3/15/2025</MoveOutDate>
