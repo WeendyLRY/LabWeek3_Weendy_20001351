@@ -98,25 +98,28 @@
                                     <Record Field="sFields13" Name="Other 5" Value="" />
                                 </CustomRecords>
                                 <OtherOccupants>
-                                    <OtherOccupant Code="r0064489" pCode="p0714786" Relationship="Roommate">
-                                        <FirstName>Kimberly</FirstName>
-                                        <LastName>Deng</LastName>
-                                        <Email>kimberly@gmail.com</Email>
+                                    <OtherOccupant Code="rwl2501061328" pCode="p0714786" Relationship="Roommate">
+                                        <FirstName>Hood</FirstName>
+                                        <LastName>Rats</LastName>
+                                        <Email>hoodrats@gmail.com</Email>
                                         <Phone PhoneType="office">
                                             <PhoneDescription>Office</PhoneDescription>
-                                            <PhoneNumber>5555551234</PhoneNumber>
+                                            <PhoneNumber>2565726401</PhoneNumber>
                                         </Phone>
                                         <Phone PhoneType="home">
                                             <PhoneDescription>Home</PhoneDescription>
+					<PhoneNumber>2565726402</PhoneNumber>
                                         </Phone>
                                         <Phone PhoneType="fax">
                                             <PhoneDescription>FAX</PhoneDescription>
+<PhoneNumber>2565726403</PhoneNumber>
                                         </Phone>
                                         <Phone PhoneType="cell">
                                             <PhoneDescription>Mobile</PhoneDescription>
+<PhoneNumber>2565726404</PhoneNumber>
                                         </Phone>
                                         <MoveInDate />
-                                        <MoveOutDate>3/15/2024</MoveOutDate>
+                                        <MoveOutDate>3/15/2025</MoveOutDate>
                                         <CustomRecords scope="Roommate">
                                             <Record Field="dtMoveIn" Name="Move In" Value="" />
                                             <Record Field="dtMoveOut" Name="Move-Out" Value="3/15/2024" />
@@ -217,44 +220,7 @@
                                             <Record Field="custom" Name="OccupantType" Value="" />
                                         </CustomRecords>
                                     </OtherOccupant>
-  <OtherOccupant Code="rwl2501061328" pCode="pwl2501021359" Relationship="Roommate">
-                                        <FirstName>Hood</FirstName>
-                                        <LastName>Rats</LastName>
-                                        <Email>hoodrats@gmail.com</Email>
-                                        <Phone PhoneType="office">
-                                            <PhoneDescription>Office</PhoneDescription>
-                                            <PhoneNumber>2565726401</PhoneNumber>
-                                        </Phone>
-                                        <Phone PhoneType="home">
-                                            <PhoneDescription>Home</PhoneDescription>
-                                          <PhoneNumber>2565726402</PhoneNumber>
-                                        </Phone>
-                                        <Phone PhoneType="fax">
-                                            <PhoneDescription>FAX</PhoneDescription>
- 						<PhoneNumber>2565726403</PhoneNumber>
-                                        </Phone>
-                                        <Phone PhoneType="cell">
-                                            <PhoneDescription>Mobile</PhoneDescription>
-					    <PhoneNumber>2565726404</PhoneNumber>
-                                        </Phone>
-                                        <MoveInDate />
-                                        <MoveOutDate>3/15/2025</MoveOutDate>
-                                        <CustomRecords scope="Roommate">
-                                            <Record Field="dtMoveIn" Name="Move In" Value="" />
-                                            <Record Field="dtMoveOut" Name="Move-Out" Value="3/15/2024" />
-                                            <Record Field="sPhoneNum0" Name="Car Model/Color" Value="" />
-                                            <Record Field="sPhoneNum1" Name="License #" Value="" />
-                                            <Record Field="sPhoneNum2" Name="Employer" Value="" />
-                                            <Record Field="sPhoneNum3" Name="Work Phone" Value="" />
-                                            <Record Field="sPhoneNum4" Name="Work Hours" Value="" />
-                                            <Record Field="sPhoneNum5" Name="Revoke Access" Value="" />
-                                            <Record Field="sPhoneNum6" Name="Other 2" Value="" />
-                                            <Record Field="sPhoneNum7" Name="Other 3" Value="" />
-                                            <Record Field="sPhoneNum8" Name="Other 4" Value="" />
-                                            <Record Field="sPhoneNum9" Name="Other 5" Value="" />
-                                            <Record Field="custom" Name="OccupantType" Value="" />
-                                        </CustomRecords>
-                                    </OtherOccupant>
+  
                                 </OtherOccupants>
                             </Resident>
                          
