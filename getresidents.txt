@@ -58,14 +58,14 @@
                                     <Record Field="sFields13" Name="Other 5" Value="" />
                                 </CustomRecords>
                             </Resident>
-                            <Resident tCode="t0111037" pCode="p0714785">
+                            <Resident tCode="t2501061506" pCode="p0714785">
                                 <Status>Current</Status>
-                                <FirstName>Jacky</FirstName>
-                                <LastName>Chan</LastName>
-                                <Email>jacky@gmail.com</Email>
+                                <FirstName>Charles</FirstName>
+                                <LastName>Bernstain</LastName>
+                                <Email>charlesbernstein12@gmail.com</Email>
                                 <Phone PhoneType="office">
                                     <PhoneDescription>Office</PhoneDescription>
-                                    <PhoneNumber>(555) 555-1234</PhoneNumber>
+                                    <PhoneNumber>(555) 555-9928</PhoneNumber>
                                 </Phone>
                                 <Rent>900.00</Rent>
                                 <UnitCode>102</UnitCode>
@@ -98,10 +98,10 @@
                                     <Record Field="sFields13" Name="Other 5" Value="" />
                                 </CustomRecords>
                                 <OtherOccupants>
-                                    <OtherOccupant Code="rwl2501061328" pCode="p0714786" Relationship="Roommate">
-                                        <FirstName>Hood</FirstName>
-                                        <LastName>Rats</LastName>
-                                        <Email>hoodrats@gmail.com</Email>
+                                    <OtherOccupant Code="rwl2501061506" pCode="p0714786" Relationship="Roommate">
+                                        <FirstName>Hang</FirstName>
+                                        <LastName>Jebat</LastName>
+                                        <Email>HangJebatMelaka@gmail.com</Email>
                                         <Phone PhoneType="office">
                                             <PhoneDescription>Office</PhoneDescription>
                                             <PhoneNumber>2565726401</PhoneNumber>
